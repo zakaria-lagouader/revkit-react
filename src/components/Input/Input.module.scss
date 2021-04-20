@@ -1,0 +1,71 @@
+@import "../../vars";
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+        transition: all 0.1s ease-in-out;
+    }
+
+    &-label {
+        font-size: 1rem;
+        color: $secondary;
+        margin-bottom: 8px;
+    }
+    
+    &-input {
+        position: relative;
+        margin-bottom: 8px;
+        
+        input {
+            width: -webkit-fill-available;
+            background-color: $bright;
+            color: $primary;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid $shade;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba($color: $primary, $alpha: 0.04);
+            
+            &::placeholder{
+                color: $muted !important;
+            }
+            
+            &:focus {
+                border: 2px solid $accent;
+            }
+            
+            &:disabled {
+                background-color: transparent;
+                color: $shade;
+            }
+        }
+        
+        &-icon {
+            background-color: $bright;
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 25px;
+            height: 25px;
+            display: grid;
+            place-items: center;
+            color: $accent;
+        }
+
+    }
+
+    &-msg {
+        font-size: 14px;
+
+        &-error {
+            color: $error;
+        }
+
+        &-success {
+            color: $success;
+        }
+    }
+}

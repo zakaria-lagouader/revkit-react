@@ -1,0 +1,11 @@
+@import-normalize;
+@import "vars";
+
+* {
+  font-family: "IBM Plex Sans", sans-serif;
+  outline: none !important;
+}
+
+body {
+  background-color: $tint;
+}

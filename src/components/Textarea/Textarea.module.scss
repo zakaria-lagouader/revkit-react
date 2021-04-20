@@ -1,0 +1,59 @@
+@import "../../vars";
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+        transition: all 0.1s ease-in-out;
+    }
+
+    &-label {
+        font-size: 1rem;
+        color: $secondary;
+        margin-bottom: 8px;
+        box-shadow: 0 4ps 8px rgba($color: $primary, $alpha: 0.04);
+    }
+    
+    &-textarea {
+        position: relative;
+        margin-bottom: 8px;
+        
+        textarea {
+            width: -webkit-fill-available;
+            background-color: $bright;
+            color: $primary;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid $shade;
+            padding: 1rem;
+            resize: vertical;
+            
+            &::placeholder{
+                color: $muted !important;
+            }
+            
+            &:focus {
+                border: 2px solid $accent;
+            }
+            
+            &:disabled {
+                background-color: transparent;
+                color: $shade;
+            }
+        }
+        
+    }
+
+    &-msg {
+        font-size: 14px;
+
+        &-error {
+            color: $error;
+        }
+
+        &-success {
+            color: $success;
+        }
+    }
+}

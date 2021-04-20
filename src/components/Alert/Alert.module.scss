@@ -1,0 +1,43 @@
+@import "../../vars";
+
+.alert {
+    width: -webkit-fill-available;
+    padding: 18px 24px;
+    border-radius: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $bright;
+    box-shadow: 0 24px 48px rgba($color: $primary, $alpha: 0.04);
+
+    &-text {
+        margin: 0;
+    }
+
+    &.light {
+        color: $accent;
+        background-color: $tint;
+    }
+
+    &.dark {
+        background-color: $primary;
+    }
+    
+    &.primary {
+        background-color: $accent;
+    }
+
+    &.warning {
+        background-color: $warning;
+    }
+
+    &.success {
+        background-color: $success;
+    }
+
+    &.error {
+        background-color: $error;
+    }
+
+}

@@ -1,0 +1,32 @@
+@import "../../vars";
+
+.heading {
+    font-weight: bold;
+
+    &.x1 {
+        font-size: 72px;
+    }
+    &.x2 {
+        font-size: 64px;
+    }
+    &.x3 {
+        font-size: 56px;
+    }
+    &.x4 {
+        font-size: 34px;
+    }
+    &.x5 {
+        font-size: 28px;
+    }
+    &.x6 {
+        font-size: 20px;
+    }
+
+    &.primary {
+        color: $primary;
+    }
+
+    &.muted {
+        color: $muted;
+    }
+}

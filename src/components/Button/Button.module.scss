@@ -1,0 +1,97 @@
+@import "../../vars";
+
+.button {
+    font-weight: bold;
+    color: $muted;
+    border: 1px solid $shade;
+    background: $bright;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    
+    &.sm {
+        font-size: 14px;
+        border-radius: 3px;
+        padding: 7px 28px;
+        box-shadow: 0 2px 4px rgba($color: $primary, $alpha: 0.08);
+    }
+    
+    &.md {
+        font-size: 1rem;
+        border-radius: 6px;
+        padding: 13px 45px;
+        box-shadow: 0 4px 8px rgba($color: $primary, $alpha: 0.08);
+
+        &:hover {
+            box-shadow: 0 12px 24px rgba($color: $primary, $alpha: 0.08);
+        }
+    }
+    &.lg {
+        font-size: 1rem;
+        border-radius: 6px;
+        padding: 17px 65px;
+        box-shadow: 0 4px 8px rgba($color: $primary, $alpha: 0.08);
+        
+        &:hover {
+            box-shadow: 0 24px 48px rgba($color: $primary, $alpha: 0.08);
+        }
+    }
+
+    &.primary {
+        background-color: $bright;
+
+        &:hover {
+            border-color: $bright;
+        }
+
+        &:focus {
+            border: 2px solid $accent;
+        }
+    }
+
+    &.secondary {
+        background-color: $accent;
+        border: 2px solid $accent;
+        color: $bright;
+
+        &:focus {
+            border-color: rgba($color: $secondary, $alpha: 1);
+        }
+    }
+    
+    &.outlined {
+        background-color: transparent;
+        border: 2px solid $shade;
+        box-shadow: none !important;
+        
+        &:hover {
+            color: $accent;
+            border-color: $accent;
+        }
+
+        &:focus {
+            color: $secondary;
+            border-color: $secondary;
+        }
+    }
+
+    &:disabled {
+        cursor: no-drop;
+        
+        &.primary {
+            background-color: $tint;
+            border-color: $shade;
+            color: #BEC2C9;
+        }
+
+        &.secondary {
+            background-color: $shade;
+            border-color: $shade;
+            color: #BEC2C9;
+        }
+
+        &.outlined {
+            border-color: rgba($color: $primary, $alpha: 0.24);
+            color: #BEC2C9;
+        }
+    }
+}
